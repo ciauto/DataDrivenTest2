@@ -9,7 +9,11 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class Login_MT_Array_001 {
+	
+	
+	
 	@Test(dataProvider="credential")
+	
 	public void login(String username, String password) throws InterruptedException{
 		System.setProperty("webdriver.chrome.driver", "c:\\driver\\chromedriver.exe");
 		WebDriver driver=new ChromeDriver();
@@ -24,17 +28,29 @@ public class Login_MT_Array_001 {
 		Assert.assertTrue(driver.getTitle().contains("Find a Flight"));
 		driver.quit();
 		}
+	
+	
 	@DataProvider(name="credential")
-	public Object[][] passdata(){
+	
+		public Object[][] passdata(){
 		//create 2D array name data with 3 rows and 2 column
-		Object[][] data = new Object[3][2];
+		Object[][] data = new Object[4][2];
 		//we have input data 	
 		data[0][0]="tutorial";
 		data[0][1]="tutorial";
+		
 		data[1][0]="Tye";
-		data[1][1]="tutorial";		
+		data[1][1]="tutorial";	
+		
 		data[2][0]="Naresh";
 		data[2][1]="tutorial";
+		
+		data[3][0] = "Dilli" ;
+		data[3][1] = "Two";
+		
+		
+		
 		return data;
-		}
+		
+	}
 }

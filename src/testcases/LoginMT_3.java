@@ -38,9 +38,13 @@ public class LoginMT_3 {
 		}
 	@DataProvider(name="credential")
 		public String [][] getExcelData() throws IOException{
+		
 		ExcelReaderwithDataProviderMethod read=new ExcelReaderwithDataProviderMethod();
+		
 		return read.passData("C:\\Users\\Naresh\\oxygen-workspace\\DataDrivenTest2\\resources\\testdataMT_003.xlsx", "credentials");
 		}
+	
+	
 	@AfterMethod
 	public void afterMethod() {
 		driver.close();

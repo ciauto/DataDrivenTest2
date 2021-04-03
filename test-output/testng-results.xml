@@ -1,52 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="2" ignored="0" total="3" passed="1">
+<testng-results skipped="0" failed="2" ignored="0" total="2" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="35869" started-at="2019-02-22T22:16:12Z" finished-at="2019-02-22T22:16:47Z">
+  <suite name="Default suite" duration-ms="39508" started-at="2021-04-03T14:50:17Z" finished-at="2021-04-03T14:50:57Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="35869" started-at="2019-02-22T22:16:12Z" finished-at="2019-02-22T22:16:47Z">
-      <class name="testcases.Login_MT_Array_001">
-        <test-method status="PASS" signature="login(java.lang.String, java.lang.String)[pri:0, instance:testcases.Login_MT_Array_001@59fa1d9b]" name="login" duration-ms="14751" started-at="2019-02-22T22:16:12Z" data-provider="credential" finished-at="2019-02-22T22:16:26Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[tutorial]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[tutorial]]>
-              </value>
-            </param>
-          </params>
+    <test name="Default test" duration-ms="39508" started-at="2021-04-03T14:50:17Z" finished-at="2021-04-03T14:50:57Z">
+      <class name="testcases.TC002AddPayee">
+        <test-method status="PASS" signature="setup()[pri:0, instance:testcases.TC002AddPayee@29774679]" name="setup" is-config="true" duration-ms="5441" started-at="2021-04-03T14:50:19Z" finished-at="2021-04-03T14:50:24Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login -->
-        <test-method status="FAIL" signature="login(java.lang.String, java.lang.String)[pri:0, instance:testcases.Login_MT_Array_001@59fa1d9b]" name="login" duration-ms="10622" started-at="2019-02-22T22:16:26Z" data-provider="credential" finished-at="2019-02-22T22:16:37Z">
+        </test-method> <!-- setup -->
+        <test-method status="FAIL" signature="verifyAddPayee(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.TC002AddPayee@29774679]" name="verifyAddPayee" duration-ms="15843" started-at="2021-04-03T14:50:24Z" data-provider="credential" finished-at="2021-04-03T14:50:40Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Tye]]>
+                <![CDATA[CIBC]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[tutorial]]>
+                <![CDATA[123 Ave]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[1232Xyz]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[credit card]]>
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[expected [true] but found [false]]]>
+              <![CDATA[Cannot locate an element using xpath=//a[@href='/bank/redirect.html?url=pay-bills.html']
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
+System info: host: 'LAPTOP-20464U94', ip: '192.168.0.135', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+Driver info: driver.version: RemoteWebDriver]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertTrue(Assert.java:44)
-at org.testng.Assert.assertTrue(Assert.java:54)
-at testcases.Login_MT_Array_001.login(Login_MT_Array_001.java:24)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Cannot locate an element using xpath=//a[@href='/bank/redirect.html?url=pay-bills.html']
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
+System info: host: 'LAPTOP-20464U94', ip: '192.168.0.135', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+Driver info: driver.version: RemoteWebDriver
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at testcases.TC002AddPayee.verifyAddPayee(TC002AddPayee.java:53)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -69,39 +75,65 @@ at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
 at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
 at org.testng.TestNG.runSuites(TestNG.java:1049)
 at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login -->
-        <test-method status="FAIL" signature="login(java.lang.String, java.lang.String)[pri:0, instance:testcases.Login_MT_Array_001@59fa1d9b]" name="login" duration-ms="10480" started-at="2019-02-22T22:16:37Z" data-provider="credential" finished-at="2019-02-22T22:16:47Z">
+        </test-method> <!-- verifyAddPayee -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testcases.TC002AddPayee@29774679]" name="tearDown" is-config="true" duration-ms="934" started-at="2021-04-03T14:50:40Z" finished-at="2021-04-03T14:50:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:testcases.TC002AddPayee@29774679]" name="setup" is-config="true" duration-ms="3866" started-at="2021-04-03T14:50:41Z" finished-at="2021-04-03T14:50:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="FAIL" signature="verifyAddPayee(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.TC002AddPayee@29774679]" name="verifyAddPayee" duration-ms="11633" started-at="2021-04-03T14:50:45Z" data-provider="credential" finished-at="2021-04-03T14:50:56Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Naresh]]>
+                <![CDATA[HydroOne]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[tutorial]]>
+                <![CDATA[123 Ave]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[dfljsdl123]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Electricity Bill]]>
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[expected [true] but found [false]]]>
+              <![CDATA[Cannot locate an element using xpath=//a[@href='/bank/redirect.html?url=pay-bills.html']
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
+System info: host: 'LAPTOP-20464U94', ip: '192.168.0.135', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+Driver info: driver.version: RemoteWebDriver]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertTrue(Assert.java:44)
-at org.testng.Assert.assertTrue(Assert.java:54)
-at testcases.Login_MT_Array_001.login(Login_MT_Array_001.java:24)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Cannot locate an element using xpath=//a[@href='/bank/redirect.html?url=pay-bills.html']
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
+System info: host: 'LAPTOP-20464U94', ip: '192.168.0.135', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+Driver info: driver.version: RemoteWebDriver
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at testcases.TC002AddPayee.verifyAddPayee(TC002AddPayee.java:53)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -124,16 +156,20 @@ at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
 at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
 at org.testng.TestNG.runSuites(TestNG.java:1049)
 at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login -->
-      </class> <!-- testcases.Login_MT_Array_001 -->
+        </test-method> <!-- verifyAddPayee -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testcases.TC002AddPayee@29774679]" name="tearDown" is-config="true" duration-ms="586" started-at="2021-04-03T14:50:56Z" finished-at="2021-04-03T14:50:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testcases.TC002AddPayee -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
